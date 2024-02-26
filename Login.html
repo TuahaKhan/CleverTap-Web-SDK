@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <script type="text/javascript" src="Login.js"></script>
+    <link rel="stylesheet" href="Login.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>User Profile Form</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="identity">Identity:</label><br>
+        <input type="text" id="identity" name="identity" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <button type="submit" name="userLogin" onclick="OnUserLogin()">User Login</button>
+        <button type="button" onclick="PushProfile()">Profile Push</button>
+    </form>
+</body>
+</html>
