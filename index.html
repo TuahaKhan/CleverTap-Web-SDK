@@ -1,44 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- CleverTap Web Integration  JavaScript-->
-    <script type="text/javascript" src="Index.js"></script>  
-    <!-- External css -->
-    <link rel="stylesheet" href="Index.css">
-    
-    <style>
-       
-    </style>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    
+    <link rel="stylesheet" href="Index.css"> <!-- External css -->
 </head>
 <body>
     <div class="navbar">
-        <!-- <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a> -->
         <div class="login-button">
             <button onclick="location.href='login.html'">Login</button>
         </div>
     </div>
-        <!-- Web Pop-up Options -->
 
-                <div class="popup-options">
-            <button onclick="box('box')" id="box">Box</button>
-            <button onclick="banner('banner')" id="banner">Banner</button>
-            <button onclick="interstitial('interstitial')" id="interstitial">Interstitial</button>
-            <button onclick="image()" id="iSmage_only">Image Only</button>
-        </div>
-      
     <div style="padding:20px">
         <h2>CleverTap Web Integration</h2>
     </div>
 
-</body>
+    <!-- Web Pop-up Options -->
+    <div class="popup-options">
+        <button onclick="box('box')" id="box">Box</button>
+        <button onclick="banner('banner')" id="banner">Banner</button>
+        <button onclick="interstitial('interstitial')" id="interstitial">Interstitial</button>
+        <button onclick="image()" id="image_only">Image Only</button>
+    </div>
 
+    <script type="text/javascript" src="Index.js"></script> <!-- CleverTap Web Integration JavaScript -->
+</body>
 </html>
