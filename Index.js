@@ -33,6 +33,7 @@ function image(){
 
 }
 
+
 function Push(){
     clevertap.notifications.push({
         // "apnsWebPushId": "<apple web push id>",
@@ -43,11 +44,12 @@ function Push(){
            "rejectButtonText": "No thanks",
            "okButtonColor":"#F28046",
            "askAgainTimeInSeconds":5,
-          "serviceWorkerPath": "/foo/my_sw.js" // path to your custom service worker file
+        //   "serviceWorkerPath": "/foo/my_sw.js" // path to your custom service worker file
       });
     clevertap.event.push("Web Push");
 
 }
+
 
 
 // function tokenPermission() {
@@ -69,4 +71,4 @@ function Push(){
 //     }
 // }
 
-
+console.log("Native Display Vesion Live");

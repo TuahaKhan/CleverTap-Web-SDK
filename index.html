@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Index.css"> <!-- External css -->
+    <script>
+        function nativeDisplay(){
+            clevertap.event.push("Web Native Display")
+        }
+        document.addEventListener("DOMContentLoaded",nativeDisplay);
+
+    </script>
+
 </head>
 <body>
     <div class="navbar">
@@ -24,11 +32,13 @@
         <button onclick="interstitial('interstitial')" id="interstitial">Interstitial</button>
         <button onclick="image()" id="image_only">Image Only</button>
         <button onclick="Push()" id="Push">Web Push</button>
-
+        
     </div>
 
     
-
+    <div class="native">
+        This is native display content 
+    </div>
     <script type="text/javascript" src="Index.js"></script> <!-- CleverTap Web Integration JavaScript -->
 </body>
 </html>
