@@ -4,6 +4,7 @@ clevertap.account.push({ "id": "TEST-449-RRZ-7W7Z" });
 clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
 clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data'
 clevertap.dismissSpamControl=true;//Spam control 
+// importScripts('https://s3-eu-west-1.amazonaws.com/static.wizrocket.com/js/sw_webpush.js');// remove CleverTap server worker from your root folder
 (function () {
         var wzrk = document.createElement('script');
         wzrk.type = 'text/javascript';
@@ -32,4 +33,11 @@ function image(){
 
 }
 
-
+clevertap.notifications.push({
+    // "apnsWebPushId":"<apple web push id>", //only for safari browser
+    // "apnsWebPushServiceUrl":"<safari package service url>",//only for safari browser
+    "titleText":'Would you like to receive Push Notifications?',
+    "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+    "okButtonText":'Sign me up!',
+    "rejectButtonText":'No thanks',
+    "okButtonColor":'#f28046'});
