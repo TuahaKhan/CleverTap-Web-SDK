@@ -33,11 +33,40 @@ function image(){
 
 }
 
-clevertap.notifications.push({
-    // "apnsWebPushId":"<apple web push id>", //only for safari browser
-    // "apnsWebPushServiceUrl":"<safari package service url>",//only for safari browser
-    "titleText":'Would you like to receive Push Notifications?',
-    "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
-    "okButtonText":'Sign me up!',
-    "rejectButtonText":'No thanks',
-    "okButtonColor":'#f28046'});
+function Push(){
+    clevertap.notifications.push({
+        // "apnsWebPushId": "<apple web push id>",
+        // "apnsWebPushServiceUrl": "<safari package service url>", 
+           "titleText": "Would you like to receive Push Notifications?",
+           "bodyText": "We promise to only send you relevant content and give you updates on your transactions",
+           "okButtonText": "Sign me up!",
+           "rejectButtonText": "No thanks",
+           "okButtonColor":"#F28046",
+           "askAgainTimeInSeconds":5,
+        //   "serviceWorkerPath": "/foo/my_sw.js" // path to your custom service worker file
+      });
+    clevertap.event.push("Web Push");
+
+}
+
+
+// function tokenPermission() {
+//     // Check if the function has already been executed
+//     if (!localStorage.getItem('tokenPermissionExecuted')) {
+//         // Execute the function only if it hasn't been executed before
+//         clevertap.notifications.push({
+//             // "apnsWebPushId":"<apple web push id>", //only for safari browser
+//             // "apnsWebPushServiceUrl":"<safari package service url>",//only for safari browser
+//             "titleText": 'Would you like to receive Push Notifications?',
+//             "bodyText": 'We promise to only send you relevant content and give you updates on your transactions',
+//             "okButtonText": 'Sign me up!',
+//             "rejectButtonText": 'No thanks',
+//             "okButtonColor": '#f28046'
+//         });
+
+//         // Mark that the function has been executed
+//         localStorage.setItem('tokenPermissionExecuted', true);
+//     }
+// }
+
+
