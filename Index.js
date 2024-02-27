@@ -43,7 +43,7 @@ function Push(){
            "rejectButtonText": "No thanks",
            "okButtonColor":"#F28046",
            "askAgainTimeInSeconds":5,
-        //   "serviceWorkerPath": "/foo/my_sw.js" // path to your custom service worker file
+          "serviceWorkerPath": "/foo/my_sw.js" // path to your custom service worker file
       });
     clevertap.event.push("Web Push");
 
