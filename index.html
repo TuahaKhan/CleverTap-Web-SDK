@@ -6,7 +6,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="Index.css"> <!-- External css -->
     <script>
-        function nativeDisplay(){
+        //Token Permission
+        function fcmNotificationPermissionHandler(){
+        clevertap.notifications.push({
+            // "apnsWebPushId": "<apple web push id>",
+            // "apnsWebPushServiceUrl": "<safari package service url>", 
+               "titleText": "Would you like to receive Push Notifications?",
+               "bodyText": "We promise to only send you relevant content and give you updates on your transactions",
+               "okButtonText": "Sign me up!",
+               "rejectButtonText": "No thanks",
+               "okButtonColor":"#F28046",
+               "askAgainTimeInSeconds":5,
+               "serviceWorkerPath": "clevertap_sw.js" // path to your custom service worker file
+          });
+        }
+
+        document.addEventListener("DOMContentLoaded",fcmNotificationPermissionHandler);
+          //Calling native display
+          function nativeDisplay(){
             clevertap.event.push("Web Native Display")
         }
         document.addEventListener("DOMContentLoaded",nativeDisplay);
@@ -29,7 +46,7 @@
     <div class="popup-options">
         <button onclick="box()" id="box">Box</button>
         <button onclick="banner()" id="banner">Banner</button>
-        <button onclick="interstitial('interstitial')" id="interstitial">Interstitial</button>
+        <button onclick="interstitial()" id="interstitial">Interstitial</button>
         <button onclick="image()" id="image_only">Image Only</button>
         <button onclick="Push()" id="Push">Web Push</button>
         
