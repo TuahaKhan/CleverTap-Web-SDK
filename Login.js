@@ -20,6 +20,8 @@ var identity = document.getElementById('identity').value;
 var phone = document.getElementById('phone').value;
 var gender = document.getElementById('gender').value;
 var dob = document.getElementById('dob').value;
+var image=document.getElementById('image').value;
+
 clevertap.onUserLogin.push({
     "Site": {
       "Name": name,            // String
@@ -27,7 +29,9 @@ clevertap.onUserLogin.push({
       "Email": email,         // Email address of the user
       "Phone": phone,           // Phone (with the country code)
       "Gender": gender,                     // Can be either M or F
-      "DOB": dob,                 // Date of Birth. Date object
+      "DOB": new Date(dob),  
+      "Photo":image,
+      // Date of Birth. Date object
    // optional fields. controls whether the user will be sent email, push etc.
       "MSG-email": false,                // Disable email notifications
       "MSG-push": true,                  // Enable push notifications
@@ -39,6 +43,8 @@ clevertap.onUserLogin.push({
 
 
 function PushProfile(){
+
+   var image=document.getElementById('image').value;
     var name= document.getElementById('name').value;
     var identity = document.getElementById('identity').value;
      var email = document.getElementById('email').value;
@@ -52,7 +58,9 @@ function PushProfile(){
           "Email": email,         // Email address of the user
           "Phone": phone,           // Phone (with the country code)
           "Gender": gender,                     // Can be either M or F
-          "DOB": dob,                 // Date of Birth. Date object
+          "DOB": new Date(dob),
+          "Photo":image,
+                           // Date of Birth. Date object
        // optional fields. controls whether the user will be sent email, push etc.
           "MSG-email": false,                // Disable email notifications
           "MSG-push": true,                  // Enable push notifications

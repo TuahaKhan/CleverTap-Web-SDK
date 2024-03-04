@@ -13,32 +13,41 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="navbar">
+        <a href="#" class="navbar-brand">My Website</a>
+        <button class="user-profile-button">User Profile</button>
+    </div>
+
     <h2>User Profile Form</h2>
-    <form>
+    <form enctype="multipart/form-data">
+        
+        <label for="name">Enter Profile URL</label><br>
+        <input type="text" id="image" name="name" ><br>
+
         <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" id="name" name="name" ><br>
 
         <label for="identity">Identity:</label><br>
-        <input type="text" id="identity" name="identity" required><br>
+        <input type="text" id="identity" name="identity" ><br>
 
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="email" name="email" ><br>
 
         <label for="phone">Phone:</label><br>
-        <input type="tel" id="phone" name="phone" required><br>
+        <input type="tel" id="phone" name="phone" ><br>
 
         <label for="gender">Gender:</label><br>
-        <select id="gender" name="gender" required>
-            <option value="">Select</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+        <select id="gender" name="gender" >
+            <option value="M">Male</option>
+            <option value="F">Female</option>
         </select><br>
 
         <label for="dob">Date of Birth:</label><br>
-        <input type="date" id="dob" name="dob" required><br>
+        <input placeholder="mm/dd/yyyy" type="text" id="dob" name="dob" ><br>
 
         <button type="submit" name="userLogin" onclick="OnUserLogin()">User Login</button>
         <button type="button" onclick="PushProfile()">Profile Push</button>
     </form>
 </body>
 </html>
+ 
