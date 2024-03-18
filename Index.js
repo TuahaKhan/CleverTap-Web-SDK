@@ -42,3 +42,38 @@ function Push(){
 
 
 console.log("Native Display Vesion Live");
+
+
+
+
+function renderCartDropOffPersonalisationCampaign(data) {
+  const imageUrl=data.kv.img;
+  console.log(img)
+
+
+  var img = document.createElement('img');
+
+  img.src = imageUrl;
+
+  var imageContainer = document.getElementById('image-container');
+  imageContainer.appendChild(img);
+
+  
+
+}
+
+document.addEventListener("CT_web_native_display", function(event) {
+    const data = event.detail;
+    console.log(data);
+      const topic = data.kv.topic;
+      console.log("Printing Topic")
+      console.log(topic)
+      switch (topic) {
+          case "nativeDisplay": {
+            console.log("Inside switch case")
+            console.log(data)
+              renderCartDropOffPersonalisationCampaign(data)
+              break;
+         }
+    }
+  });
