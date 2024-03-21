@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
-    <script type="text/javascript" src="Login.js">
-    
-    </script>
-
+    <!-- External Files -->
+    <script type="text/javascript" src="Login.js"></script>
+    <script src="clevertap_integration.js"></script>
     <link rel="stylesheet" href="Login.css">
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
     <div class="navbar">
@@ -45,7 +44,7 @@
         <label for="dob">Date of Birth:</label><br>
         <input placeholder="mm/dd/yyyy" type="text" id="dob" name="dob" ><br>
 
-        <button type="submit" name="userLogin" onclick="OnUserLogin()">User Login</button>
+        <button type="button" name="userLogin" onclick="OnUserLogin()">User Login</button>
         <button type="button" onclick="PushProfile()">Profile Push</button>
     </form>
 </body>

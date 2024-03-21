@@ -57,3 +57,43 @@ h2 {
 .popUps-container{
     /* background-color: #45a049; */
 }
+
+
+/* Axis Bank Solution */
+ /* Custom CSS for card layout */
+ .card {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
