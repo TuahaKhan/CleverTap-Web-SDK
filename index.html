@@ -13,20 +13,11 @@
 
 
     <script>
-        //Token Permission
-        function fcmNotificationPermissionHandler(){
-        clevertap.notifications.push({ 
-               "titleText": "Would you like to receive Push Notifications?",
-               "bodyText": "We promise to only send you relevant content and give you updates on your transactions",
-               "okButtonText": "Sign me up!",
-               "rejectButtonText": "No thanks",
-               "okButtonColor":"#F28046",
-               "askAgainTimeInSeconds":5,
-               "serviceWorkerPath": "clevertap_sw.js" // path to your custom service worker file
-            });
-        }
-        document.addEventListener("DOMContentLoaded",fcmNotificationPermissionHandler); 
-        
+        // Web push soft pop-up is now handled in Index.js with a second-visit gate.
+        // The unconditional DOMContentLoaded call that fired on every page load has been
+        // removed — clevertap.notifications.push() is called from Index.js only when
+        // localStorage ct_page_visits >= 2.
+
         //Calling native display
         function getUrlParameter(name) {
             // Use a regular expression to search for the parameter in the URL
