@@ -54,7 +54,11 @@ if (visitCount >= 2) {
         rejectButtonText: 'No thanks',
         okButtonColor: '#f28046',
         // If the user dismisses without choosing, wait 7 days before asking again.
-        askAgainTimeInSeconds: 604800
+        askAgainTimeInSeconds: 604800,
+        // Relative path: the CleverTap SDK otherwise defaults to registering the
+        // service worker at the domain root, which 404s when the site is served
+        // from a subpath (e.g. a GitHub Pages project site like /CleverTap-Web-SDK/).
+        serviceWorkerPath: 'clevertap_sw.js'
     });
 }
 function renderCartDropOffPersonalisationCampaign(data) {
