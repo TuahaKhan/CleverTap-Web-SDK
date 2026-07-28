@@ -13,20 +13,8 @@
 
 
     <script>
-        Token Permission
-        function fcmNotificationPermissionHandler(){
-        clevertap.notifications.push({ 
-               "titleText": "Would you like to receive Push Notifications?",
-               "bodyText": "We promise to only send you relevant content and give you updates on your transactions",
-               "okButtonText": "Sign me up!",
-               "rejectButtonText": "No thanks",
-               "okButtonColor":"#F28046",
-               "askAgainTimeInSeconds":5,
-               "serviceWorkerPath": "clevertap_sw.js" // path to your custom service worker file
-            });
-        }
-        document.addEventListener("DOMContentLoaded",fcmNotificationPermissionHandler); 
-        
+        // Web push soft pop-up is handled in Index.js (second-visit gated).
+
         //Calling native display
         function getUrlParameter(name) {
             // Use a regular expression to search for the parameter in the URL
